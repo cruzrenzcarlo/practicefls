@@ -12,7 +12,7 @@ export default function CreateBook() {
         const bookvar = { author: author, title: title, description: description};
 
         axios
-            .post('http://localhost:5000/book/add', bookvar)
+            .post('https://practiceflsbe.onrender.com/add', bookvar)
             .then((res) => {
                 window.location = '/';
                 console.log('test');
