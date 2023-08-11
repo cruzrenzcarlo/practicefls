@@ -30,7 +30,7 @@ export default function BookList() {
     const [books, setBooksList] = useState([]);
     useEffect(() => {
         axios
-            .get('http://localhost:5000/book/')
+            .get('https://practiceflsbe.onrender.com/book/')
             .then((response) => {
                 setBooksList(response.data);
             })
@@ -41,7 +41,7 @@ export default function BookList() {
 
     const deleteBook = (id) => {
         axios
-            .delete(`http://localhost:5000/book/delete/${id}`)
+            .delete(`https://practiceflsbe.onrender.com/book/delete/${id}`)
             .then((response) => {
                 console.log(response.data);
                 setBooksList(books.filter((el) => el._id !== id)); // Note the use of "_id"
